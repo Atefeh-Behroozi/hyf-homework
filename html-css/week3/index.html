@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Payment methods</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Payments</h1>
+        <h2>Complete the information below</h2>
+      </header>
+      
+      <div class="page">
+        <div class="summary">
+          <div class="payment">
+            <h2>Order Summary</h2>
+          </div>
+          <div class="rows">
+            <div class="row-1">
+              <p>Total</p>
+              <p>$333 / month</p>
+            </div>
+            <hr class="line" />
+            <div class="row-2">
+              <p>Total</p>
+              <p>$100</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Payment Method</h3>
+        <div class="methods">
+        <input type="radio" id="visa" name="method" checked class="radio">
+        <label for="method-1">
+          <div class="visa">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.WQXdS_QGpEQYnGjYcKqQigHaEE&pid=Api&P=0"
+              alt="card picture"
+              />
+          </div>
+          <span>Credit/Debit</span>
+        </label>
+        <input type="radio" id="paypal" name="method" checked class="radio">
+       <label for="method-2">
+        <div class="paypal">
+          <img
+          src="https://tse4.mm.bing.net/th?id=OIP.D9JVKNuhMuRhUXN4AhCi1gHaHa&pid=Api&P=0"
+          alt="paypal picture"
+          height="70px" width="50px"
+        />
+        </div>
+        <span>PayPal</span>
+       </label>
+      </div> 
+
+        
+      <h3>Card Info</h3>
+        <div class="info">
+          <div class="number">
+            <label for="cnumber">Card Number</label>
+            <div class="card-number">
+            <input
+              type="text"
+              id="number"
+              name="number"
+              maxlength="30"
+              placeholder="1234 1234 1234 1234"
+            />
+          </div>
+        </div>
+          <div class="codes">
+            <div class="expire">
+              <label for="date">Expiry Date</label>
+              <div class="expiry-date">
+              <input
+                type="text"
+                id="date"
+                name="date"
+                maxlength="10"
+                placeholder="MM/YY"
+              />
+            </div>
+          </div>
+            <div class="security">
+              <label for="cvv">Security Code</label>
+              <div class="security-code">
+              <input
+                type="text"
+                id="security"
+                name="security"
+                maxlength="15"
+                placeholder="CVV"
+              />
+            </div>
+          </div>
+          </div>
+          </div>
+      
+        <div class="button">
+          <button type="submit" class="mbutton">Buy Now</button>
+          <h4>Need Help?</h4>
+        </div>
+      </div>
+   </div>
+  </div>
+  </body>
+</html>
