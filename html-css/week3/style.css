@@ -40,7 +40,7 @@ p {
 }
 .summary {
   width: 100%;
-  background: linear-gradient(#fd7b46, #fe4e9b);
+  background: linear-gradient(to right, #fd7b46, #fe4e9b);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -67,33 +67,67 @@ img {
   width: 70px;
   height: 50px;
   margin-top: 30px;
+  margin-left: 110px;
 }
-span {
-  color: gray;
+h5 {
+  margin-left: 110px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-style: SemiBold;
+  color: #939393;
 }
-.methods {
-  width: 600px;
-  height: 110px;
-  margin-top: 20px;
-  margin-bottom: 80px;
+
+.paymentMethod {
   display: flex;
+  width: 400px;
+  height: 110px;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
   justify-items: center;
+  gap: 2%;
 }
-.methods label {
-  width: 48%;
+.form-row {
+  line-height: 22px;
+
+  font-size: 18px;
+  color: rgb(161, 157, 157);
+}
+
+input[name="payment"] {
+  display: none;
+}
+
+input:checked + .payment-type {
+  border: 3px solid #fe4e9b;
   border-radius: 10px;
-  box-shadow: 8px 8px 20px rgb(0, 0, 0, 0.3);
+}
+
+.paymentMethod {
+  width: 700px;
+  display: flex;
+  border-radius: 1px;
+  margin-top: 40px;
+  margin-left: -30px;
   height: 150px;
   align-items: center;
 }
 
-.radio {
-  display: none;
+.form-row {
+  width: 300px;
+  height: 130px;
+  background: #ffffff;
+  box-shadow: 8px 8px 20px rgb(0, 0, 0, 0.3);
+  margin-left: 30px;
+  border-radius: 10px;
 }
-.radio:checked + label {
-  border: 2px solid #fe4e9b;
+
+img {
+  margin-top: 10px;
+}
+
+label {
+  width: 370px;
+  height: 110px;
 }
 
 .info {
@@ -160,20 +194,25 @@ button {
   margin-top: 50px;
   margin-left: 5px;
   padding: 8px 70px;
-  background: linear-gradient(#fd7b46, #fe4e9b);
+  background: linear-gradient(to right, #fd7b46, #fe4e9b);
   line-height: 29px;
   color: #f3f1f2;
   border: none;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   .page {
     width: 400px;
     height: 784px;
   }
+  .payment-form {
+    width: 200px;
+    height: 400px;
+  }
 
-  .methods {
-    width: 260px;
+  .paymentMethod {
+    width: 400px;
+    height: 400px;
     margin-top: 2px;
     height: 10px;
   }

@@ -8,6 +8,7 @@
     <title>Payment methods</title>
   </head>
   <body>
+    <form action="index.html" class="payment-form">
     <div class="container">
       <header>
         <h1>Payments</h1>
@@ -32,33 +33,32 @@
           </div>
         </div>
 
-        <h3>Payment Method</h3>
-        <div class="methods">
-        <input type="radio" id="visa" name="method" checked class="radio">
-        <label for="method-1">
-          <div class="visa">
-            <img
-              src="https://tse1.mm.bing.net/th?id=OIP.WQXdS_QGpEQYnGjYcKqQigHaEE&pid=Api&P=0"
-              alt="card picture"
-              />
-          </div>
-          <span>Credit/Debit</span>
-        </label>
-        <input type="radio" id="paypal" name="method" checked class="radio">
-       <label for="method-2">
-        <div class="paypal">
-          <img
-          src="https://tse4.mm.bing.net/th?id=OIP.D9JVKNuhMuRhUXN4AhCi1gHaHa&pid=Api&P=0"
-          alt="paypal picture"
-          height="70px" width="50px"
-        />
-        </div>
-        <span>PayPal</span>
-       </label>
-      </div> 
 
+        <h3>Payment Method</h3>
         
-      <h3>Card Info</h3>
+          <div class="paymentMethod">
+              <div class="form-row">
+                <label for="cc" >
+                <input type="radio" id="cc" name='payment'>
+                <div class="payment-type">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.WQXdS_QGpEQYnGjYcKqQigHaEE&pid=Api&P=0" alt="card picture" >
+                <h5>Credit/Debit</h5>
+              </div>
+            </label>
+              </div>
+                <div class="form-row">
+                 <label for="paypal" >
+                 <input type="radio" id="paypal" name='payment'>
+                <div class="payment-type">
+                 <img src="https://tse4.mm.bing.net/th?id=OIP.D9JVKNuhMuRhUXN4AhCi1gHaHa&pid=Api&P=0" alt="paypal picture" >
+                 <h5>PayPal</h5>
+                </div>
+                 </label>
+               </div>
+            </div>
+       
+
+        <h3>Card Info</h3>
         <div class="info">
           <div class="number">
             <label for="cnumber">Card Number</label>
@@ -107,5 +107,12 @@
       </div>
    </div>
   </div>
+</form>
   </body>
 </html>
+
+
+
+
+
+        
