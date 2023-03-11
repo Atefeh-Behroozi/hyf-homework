@@ -114,7 +114,7 @@ function getNumberOfStudents() {
 }
 
 addStudentToClass('Alice');
-addStudentToClass('Mary');
+addStudentToClass('Atefeh');
 addStudentToClass('Benjamin');
 addStudentToClass('Alice'); 
 addStudentToClass('Sarah');
