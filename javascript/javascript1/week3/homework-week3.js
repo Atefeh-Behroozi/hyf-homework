@@ -1,24 +1,29 @@
 //Item array removal
-const names = [
-    "Peter",
-    "Ahmad",
-    "Yana",
-    "kristina",
-    "Rasmus",
-    "Samuel",
-    "katrine",
-    "Tala",
-  ];
-  const nameToRemove = "Ahmad";
-  
- 
-  const indexToRemove = names.indexOf(nameToRemove);
+function removeName(namesArray, nameToRemove) {
+  const indexToRemove = namesArray.indexOf(nameToRemove);
   
   if (indexToRemove !== -1) {
-    names.splice(indexToRemove, 1);
+    namesArray.splice(indexToRemove, 1);
   }
   
-  console.log(names); // ['Peter', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala']
+  return namesArray;
+}
+
+const names = [
+  "Peter",
+  "Ahmad",
+  "Yana",
+  "kristina",
+  "Rasmus",
+  "Samuel",
+  "katrine",
+  "Tala",
+];
+const nameToRemove = "Ahmad";
+
+const result = removeName(names, nameToRemove);
+
+console.log(result); // ['Peter', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katrine', 'Tala']
 
 
 
@@ -151,16 +156,21 @@ logOutNotesFormatted();
 
 //Unique feature
 function deleteNote(id) {
-    for (let i = 0; i < notes.length; i++) {
-      if (notes[i].id === id) {
-        notes.splice(i, 1);
-        console.log(`Note with ID ${id} deleted.`);
-        return;
-      }
+  let foundNote = false;
+  notes.forEach((note, index) => {
+    if (note.id === id) {
+      notes.splice(index, 1);
+      foundNote = true;
+      console.log(`Note with ID ${id} deleted.`);
     }
+  });
+  if (!foundNote) {
     console.log(`Error: Note with ID ${id} not found.`);
   }
-  deleteNote(2);
+}
+
+deleteNote(2);
+
   
 
   
