@@ -1,8 +1,9 @@
 //Flight booking fullname function
 
-function getFullname(firstname, surname) {
+function getFullname(firstname, surname){
   return `${firstname} ${surname}`;
 }
+
 var fullname1 = getFullname("Benjamin", "Hughes");
 var fullname2 = getFullname("Atefeh", "Behroozi");
 
@@ -29,6 +30,7 @@ console.log(fullname1);
 console.log(fullname2); 
 
 
+
 //Event application
 
 function getEventWeekday(days) {
@@ -41,6 +43,7 @@ function getEventWeekday(days) {
   console.log(getEventWeekday(5));
   console.log(getEventWeekday(9)); 
   console.log(getEventWeekday(2)); 
+
 
 
 //Weather wear
@@ -97,5 +100,5 @@ addStudentToClass('Sarah');
 addStudentToClass('David');
 addStudentToClass('Tim');
 addStudentToClass('Queen');
- 
-console.log(getNumberOfStudents()); 
+
+console.log(getNumberOfStudents());
