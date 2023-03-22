@@ -98,5 +98,4 @@ addStudentToClass('David');
 addStudentToClass('Tim');
 addStudentToClass('Queen');
  
-
 console.log(getNumberOfStudents()); 
