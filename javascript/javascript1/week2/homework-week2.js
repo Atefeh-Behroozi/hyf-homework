@@ -10,9 +10,6 @@ console.log(fullname1);
 console.log(fullname2);
 
 
-
-
-
 //Formal fullname
 function getFullname(firstname, surname, useFormalName = false) {
     if (firstname === "" || surname === "") {
@@ -32,12 +29,6 @@ console.log(fullname1);
 console.log(fullname2); 
 
 
-
-
-
-
-
-
 //Event application
 
 function getEventWeekday(days) {
@@ -51,12 +42,6 @@ function getEventWeekday(days) {
   console.log(getEventWeekday(9)); 
   console.log(getEventWeekday(2)); 
 
-
-
-
-
-
-   
 
 //Weather wear
 
@@ -72,13 +57,8 @@ function recommendClothing(temperature) {
       return "a coat and warm pants";
   }
 }
-
 const clothesToWear = recommendClothing(18);
 console.log(clothesToWear);
-
-
-
-
 
 
 //Student manager
