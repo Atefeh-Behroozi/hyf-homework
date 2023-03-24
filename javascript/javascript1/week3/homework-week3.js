@@ -27,9 +27,6 @@ console.log(result); // ['Peter', 'Yana', 'kristina', 'Rasmus', 'Samuel', 'katri
 
 
 
-
-
-
   //When will we be there??
   function calculateTravelTime(travelInformation) {
     const speed = travelInformation.speed; // km/h
