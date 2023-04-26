@@ -65,11 +65,7 @@ document.addEventListener("click", checkDoubleClick);
 
 //9
 function jokeCreator(shouldTellFunnyJoke, logFunnyJoke, logBadJoke) {
-if (shouldTellFunnyJoke) {
-    logFunnyJoke();
-} else {
-    logBadJoke();
- }
+  shouldTellFunnyJoke ? logFunnyJoke() : logBadJoke();
 }
 
 function logFunnyJoke() {
@@ -81,4 +77,4 @@ function logBadJoke() {
 }
   
 jokeCreator(true, logFunnyJoke, logBadJoke); 
-jokeCreator(false, logFunnyJoke, logBadJoke); 
+jokeCreator(false, logFunnyJoke, logBadJoke);

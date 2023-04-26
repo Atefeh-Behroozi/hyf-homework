@@ -8,9 +8,20 @@
     <script src="main1.js"></script>
   </head>
   <body>
-    <button onclick="notThisFunctionName(5, 'Called after 5 seconds')">
+    <button
+      id="myButton"
+      class="myClass"
+      onclick="notThisFunctionName(5, 'Called after 5 seconds')"
+    >
       Click me!
     </button>
     <button onclick="getLocation()">Log location</button>
+    <script>
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function () {
+          notThisFunctionName(5, "Called after 5 seconds");
+        });
+    </script>
   </body>
 </html>
