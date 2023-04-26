@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Calculator</title>
+    <link rel="stylesheet" href="currencyCalculator.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Currency Calculator</h1>
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" value="1" />
+      </div>
+      <div class="form-group">
+        <label for="from">From:</label>
+        <select id="from"></select>
+      </div>
+      <div class="form-group">
+        <label for="to">To:</label>
+        <select id="to"></select>
+      </div>
+      <div class="form-group">
+        <button id="convertBtn">Convert</button>
+      </div>
+      <div id="result"></div>
+    </div>
+
+    <script src="currencyCalculator.js"></script>
+  </body>
+</html>
