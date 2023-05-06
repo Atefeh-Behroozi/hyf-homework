@@ -1,0 +1,29 @@
+{
+    "pets": [
+      {
+        "name": "Luna",
+        "type": "Dog",
+        "breed": "Golden Retriever",
+        "age": 3,
+        "likes": ["playing fetch", "swimming", "belly rubs"],
+        "dislikes": ["thunderstorms", "vacuum cleaner"]
+      },
+      {
+        "name": "Simba",
+        "type": "Cat",
+        "breed": "Persian",
+        "age": 5,
+        "likes": ["sleeping", "bird watching", "being petted"],
+        "dislikes": ["loud noises", "being picked up"]
+      },
+      {
+        "name": "Nemo",
+        "type": "Fish",
+        "breed": "Clownfish",
+        "age": 1,
+        "likes": ["swimming", "hiding in coral", "bubbles"],
+        "dislikes": ["being overfed", "dirty water"]
+      }
+    ]
+  }
+  
