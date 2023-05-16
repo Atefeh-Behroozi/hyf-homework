@@ -1,0 +1,10 @@
+SELECT COUNT(*) AS task_count FROM tasks;
+SELECT COUNT(*) AS task_count FROM tasks WHERE due_date IS NULL ;
+SELECT * FROM tasks WHERE status = 'done';
+SELECT * FROM tasks WHERE status != 'done';
+SELECT * FROM tasks ORDER BY created_date DESC;
+SELECT * FROM tasks ORDER BY created_date DESC LIMIT 1;
+SELECT title, due_date FROM tasks WHERE title LIKE '%database%' OR description LIKE '%database%';
+SELECT title, CASE status WHEN 'done' THEN 'Done' WHEN 'in_progress' THEN 'In Progress' ELSE 'Not Started' END AS status_text FROM tasks;
+SELECT status, COUNT(*) AS task_count FROM tasks GROUP BY status;
+SELECT status, COUNT(*) AS task_count FROM tasks GROUP BY status ORDER BY task_count DESC;
