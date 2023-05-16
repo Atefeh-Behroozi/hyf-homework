@@ -15,7 +15,7 @@ const spiritAnimals = [
   const generateBtn = document.getElementById("generate-btn");
   const output = document.getElementById("spirit-animal-output");
   
-  generateBtn.addEventListener("click", function() {
+  function generateSpiritAnimal() {
     const name = nameInput.value.trim();
     
     if (name) {
@@ -25,21 +25,13 @@ const spiritAnimals = [
     } else {
       output.textContent = "Please enter your name!";
     }
-  });
-  const newAnimalBtn = document.createElement("button");
-  newAnimalBtn.textContent = "New Spirit Animal";
-  output.after(newAnimalBtn);
-  
-  newAnimalBtn.addEventListener("click", function() {
-    const name = nameInput.value.trim();
-    
-    if (name) {
-      const randomAnimal = spiritAnimals[Math.floor(Math.random() * spiritAnimals.length)];
-      const spiritAnimal = `${name} - ${randomAnimal}`;
-      output.textContent = spiritAnimal;
-    } else {
-      output.textContent = "Please enter your name!";
-    }
-  });
+  }
+generateBtn.addEventListener("click", generateSpiritAnimal);
+
+const newAnimalBtn = document.createElement("button");
+newAnimalBtn.textContent = "New Spirit Animal";
+output.after(newAnimalBtn);
+
+newAnimalBtn.addEventListener("click", generateSpiritAnimal); 
   
   
