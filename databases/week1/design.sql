@@ -1,0 +1,10 @@
+SELECT COUNT(*) AS TASKS FROM task;
+SELECT COUNT(*) AS TASKS FROM task WHERE due_date IS NULL ;
+SELECT * FROM task WHERE status_id = 'done';
+SELECT * FROM task WHERE status_id != 'done';
+SELECT * FROM task ORDER BY created DESC;
+SELECT * FROM task ORDER BY created DESC LIMIT 1;
+SELECT title, due_date FROM task WHERE title LIKE '%database%' OR description LIKE '%database%';
+SELECT task.title, status.name AS status FROM task JOIN status ON task.status_id = status.id;
+SELECT status_id, COUNT(*) AS TASKS FROM task GROUP BY status_id;
+SELECT status_id, COUNT(*) AS count FROM task GROUP BY status_id ORDER BY count DESC;
