@@ -12,12 +12,14 @@ urlForm.addEventListener('submit', async (e) => {
 
   if (screenshotUrl) {
     // Display the screenshot
-    screenshotPreview.innerHTML = `<img src="${screenshotUrl}" alt="Screenshot" />`;
-
+    const img = document.createElement('img');
+    img.src = screenshotUrl;
+    img.alt = 'Screenshot';
+    screenshotPreview.appendChild(img);
     // Enable save button
     saveButton.disabled = false;
   } else {
-    screenshotPreview.innerHTML = 'Failed to generate screenshot.';
+    screenshotPreview.innerText = 'Failed to generate screenshot.';
   }
 });
 
@@ -35,9 +37,8 @@ saveButton.addEventListener('click', async () => {
 });
 
 const generateScreenshot = async (url) => {
-  const encodedUrl = encodeURIComponent(url);
-  const screenshotUrl = `https://website-screenshot6.p.rapidapi.com/screenshot?url=${encodedUrl}&width=1920&height=1080&fullscreen=true`;
-
+  const screenWidth = window.screen.width;
+  const screenHeight = window.screen.height;
   const options = {
     method: 'GET',
     headers: {

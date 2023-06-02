@@ -1,5 +1,5 @@
-var users = [];
-var user = {
+let users = [];
+let user = {
   email: 'example@example.com',
   password: 'password123'
 };
@@ -7,9 +7,9 @@ users.push(user);
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
   event.preventDefault(); 
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
-  var foundUser = users.find(function(user) {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const foundUser = users.find(function(user) {
     return user.email === email && user.password === password;
   });
 
@@ -24,10 +24,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     });
 
     function displayUserList() {
-      var userList = document.getElementById('userList');
+      let userList = document.getElementById('userList');
       userList.innerHTML = '';
       users.forEach(function(user) {
-        var listItem = document.createElement('li');
+        let listItem = document.createElement('li');
         listItem.textContent = 'Email: ' + user.email;
         userList.appendChild(listItem);
       });
