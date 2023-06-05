@@ -31,7 +31,7 @@ CREATE TABLE `review` (
   `description` TEXT NOT NULL,
   `meal_id` INT NOT NULL,
   `stars` INT NOT NULL,
-  `created_date` DATE DEFAULT(CURRENT_DATE) NOT NULL,
+  `created-date` DATE DEFAULT(CURRENT_DATE) NOT NULL,
   CONSTRAINT `fk_review_meal` FOREIGN KEY (`meal_id`) REFERENCES `meal` (`id`) ON DELETE CASCADE ON 
      UPDATE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;

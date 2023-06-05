@@ -1,17 +1,9 @@
 USE `Meal_Sharing`;
-
-SELECT
-    `id`,
-    `price`,
-    `title`
+SELECT 
+    `id`, `price`, `title`
 FROM
     `meal`;
-
-SELECT
-    *
-FROM
-    `meal`;
-
+SELECT * FROM `meal`;
 INSERT INTO
     `meal` (
         `id`,
@@ -34,40 +26,28 @@ VALUES
         6,
         `2023.06.02`
     );
-
-SELECT
+SELECT 
     *
 FROM
     `meal`
 WHERE
     `id` = 1;
-
-UPDATE
-    meal
-SET
+UPDATE meal 
+SET 
     max_reservations = 7,
     price = 250
 WHERE
     id = 1;
-
-DELETE FROM
-    meal
-WHERE
-    id = 1;
-
-SELECT
-    *
-FROM
-    reservation;
-
+DELETE FROM meal WHERE id = 1;
+SELECT * FROM reservation;
 INSERT INTO
     reservation (
         `id`,
-        `number_of_guests`,
+        `number-of-guests`,
         `meal_id`,
-        `contact_phonenumber`,
-        `contact_email`,
-        `created_date`
+        `contact-phonenumber`,
+        `contact-email`,
+        `created-date`
     )
 VALUES
     (
@@ -78,31 +58,19 @@ VALUES
         'ati22@gmail.com',
         '2023.06.02'
     );
-
-SELECT
+SELECT 
     *
 FROM
     `reservation`
 WHERE
     `id` = 1;
-
-UPDATE
-    `reservation`
-SET
+UPDATE `reservation` 
+SET 
     `number-of-guests` = 10
 WHERE
     `id` = 1;
-
-DELETE FROM
-    `reservation`
-WHERE
-    `id` = 1;
-
-SELECT
-    *
-FROM
-    review;
-
+DELETE FROM `reservation` WHERE `id` = 1;
+SELECT * FROM review;
 INSERT INTO
     review (
         `id`,
@@ -110,21 +78,13 @@ INSERT INTO
         `meal_id`,
         `description`,
         `stars`,
-        `created_date`
+        `created-date`
     )
 VALUES
     (1, 'Great', 1, `Perfect meal!`, 5, CURDATE());
-
-SELECT
-    *
-FROM
-    `review`
-WHERE
-    `id` = 1;
-
-UPDATE
-    `review`
-SET
+SELECT * FROM `review` WHERE `id` = 1;
+UPDATE `review` 
+SET 
     `description` = 'The food is so great and tasty'
 WHERE
     `id` = 1;

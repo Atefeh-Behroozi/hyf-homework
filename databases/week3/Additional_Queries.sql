@@ -40,7 +40,6 @@ VALUES
         8,
         '2023-05-25'
     );
-
 INSERT INTO
     `reservation` (
         `id`,
@@ -61,7 +60,6 @@ VALUES
         'keren@gmail.com'
     ),
     (4, 3, 4, CURDATE(), '71347689', 'lili@gmail.com');
-
 INSERT INTO
     `review` (
         `id`,
@@ -69,7 +67,7 @@ INSERT INTO
         `description`,
         `meal_id`,
         `stars`,
-        `created_date`
+        `created-date`
     )
 VALUES
     (
@@ -96,7 +94,6 @@ VALUES
         2,
         '2023-05-28'
     );
-
 SELECT
     title,
     price
@@ -104,21 +101,8 @@ FROM
     meal
 WHERE
     price < 90;
-
-SELECT
-    title
-FROM
-    meal
-WHERE
-    title LIKE '%Rød grød med%';
-
-SELECT
-    *
-FROM
-    meal
-LIMIT
-    5;
-
+SELECT title FROM meal WHERE title LIKE '%Rød grød med%';
+SELECT * FROM meal LIMIT 5;
 SELECT
     meal.title,
     review.stars
@@ -127,10 +111,9 @@ FROM
     RIGHT JOIN review ON meal.id = review.meal_id
 WHERE
     stars = 4;
-
 SELECT
     meal.title,
-    reservation.created_date
+       reservation.created-date
 FROM
     meal
     RIGHT JOIN reservation ON meal.id = reservation.meal_id
@@ -138,7 +121,6 @@ WHERE
     meal.id = 3
 ORDER BY
     created_date DESC;
-
 SELECT
     meal.title,
     AVG(stars) AS average_score
