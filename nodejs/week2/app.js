@@ -27,7 +27,7 @@ app.get("/search", (req, res) => {
 });
 app.get("/documents/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  const document = documents.find((doc) => doc.id === id);
+  const document = documents.find((doc) => doc.id == id);
 
   if (document) {
     res.json(document);
