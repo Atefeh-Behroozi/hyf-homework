@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giphy Search</title>
+    <link rel="stylesheet" href="Giphy.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Giphy Search</h1>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Enter a keyword" />
+        <input
+          type="number"
+          id="search-limit"
+          placeholder="Number of results"
+          min="1"
+          max="25"
+          value="1"
+        />
+        <button id="search-btn">Search</button>
+      </div>
+      <div class="gif-container"></div>
+    </div>
+    <script src="Giphy.js"></script>
+  </body>
+</html>
