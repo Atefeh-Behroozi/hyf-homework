@@ -31,12 +31,12 @@ contactsAPIRouter.get("/", async (req, res) => {
     if (orderBy.length > 0 && keys.includes(orderBy)) {
       query = query.orderBy(orderBy);
     }else {
-      return res.status(422).json("Input is invalid")
+      return res.status(422).json({ error: "Input is invalid"});
     }
   }
 
-  console.log("SQL", query.toSQL().sql);
 
+  
   try {
     const data = await query;
     res.json({ data });
