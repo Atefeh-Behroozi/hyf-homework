@@ -4,7 +4,7 @@ import todoList from './components/TodoList';
 
 function App() {
 
-  
+
   return (
     <div>
       <h1>Todo List</h1>
@@ -18,5 +18,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
