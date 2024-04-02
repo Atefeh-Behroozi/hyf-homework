@@ -32,6 +32,7 @@ contactsAPIRouter.get("/", async (req, res) => {
       query = query.orderBy(orderBy);
     }else {
       return res.status(422).json({ error: "Input is invalid"});
+      return res.status(422);
     }
   }
 
